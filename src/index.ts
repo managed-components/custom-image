@@ -1,8 +1,20 @@
-import { ComponentSettings, Manager } from '@managed-components/types'
+import { Manager, MCEvent } from '@managed-components/types'
 
-export default async function (manager: Manager, _settings: ComponentSettings) {
-  manager.addEventListener('pageview', event => {
-    console.log('Hello server!')
-    event.client.execute("console.log('Hello browser')")
+async function performClientFetch(event: MCEvent) {
+  const { client, payload } = event
+  if (payload.imgSrc) {
+    await client.fetch(payload.imgSrc, {
+      method: 'GET',
+      mode: 'no-cors',
+      credentials: 'include',
+    })
+  }
+}
+export default async function (manager: Manager) {
+  manager.addEventListener('pageview', async event => {
+    await performClientFetch(event)
+  })
+  manager.addEventListener('event', async event => {
+    await performClientFetch(event)
   })
 }
