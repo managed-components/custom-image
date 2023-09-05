@@ -1,0 +1,24 @@
+{
+  "name": "custom-image",
+  "namespace": "custom-image",
+  "description": "An MC for a custom image tool",
+  "icon": "assets/icon.svg",
+  "permissions": {
+    "client_network_requests": {
+      "description": "This permission is used to send image GET requests",
+      "required": true
+    },
+    "provide_manager_events": {
+      "description": "This permission is used to fire events",
+      "required": true
+    },
+    "provide_user_events": {
+      "description": "this permission is used to fire user generatated events",
+      "required": true
+    },
+    "provide_pageviews": {
+      "description": "this permision is used to fire on pageviews",
+      "required": true
+    }
+  }
+}
