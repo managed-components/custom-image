@@ -11,10 +11,6 @@ async function performClientFetch(event: MCEvent) {
   }
 }
 export default async function (manager: Manager) {
-  manager.addEventListener('pageview', async event => {
-    await performClientFetch(event)
-  })
-  manager.addEventListener('event', async event => {
-    await performClientFetch(event)
-  })
+  manager.addEventListener('pageview', performClientFetch)
+  manager.addEventListener('event', performClientFetch)
 }

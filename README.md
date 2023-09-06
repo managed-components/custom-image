@@ -20,17 +20,15 @@ Find out more about Managed Components [here](https://blog.cloudflare.com/zaraz-
 
 > Settings are used to configure the tool in a Component Manager config file
 
-### Example Setting `boolean`
-
-`exampleSetting` can be the pixelID or any other essential/optional setting like the option to anonymize IPs, send ecommerce events etc.
+This tool require no settings.
 
 ## 🧱 Fields Description
 
 > Fields are properties that can/must be sent with certain events
 
-### Human Readable Field Name `type` _required_
+### Image Source `string` _required_
 
-`field_id` give it a short description and send to a more detailed reference [Find more about how to create your own Managed Component](https://managedcomponents.dev/).
+`imgSrc` holds a web address (a URL) that indicates the location of an image on the web.
 
 ## 📝 License
 
