@@ -1,6 +1,6 @@
 import { Manager, MCEvent } from '@managed-components/types'
 
-async function performClientFetch(event: MCEvent) {
+export async function performClientFetch(event: MCEvent) {
   const { client, payload } = event
   if (payload.imgSrc) {
     await client.fetch(payload.imgSrc, {
@@ -11,6 +11,5 @@ async function performClientFetch(event: MCEvent) {
   }
 }
 export default async function (manager: Manager) {
-  manager.addEventListener('pageview', performClientFetch)
   manager.addEventListener('event', performClientFetch)
 }
