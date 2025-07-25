@@ -1,5 +1,5 @@
 {
-  "name": "custom-image",
+  "name": "@managed-components/custom-image",
   "version": "1.0.0",
   "description": "An MC for a custom image tool",
   "main": "dist/index.js",

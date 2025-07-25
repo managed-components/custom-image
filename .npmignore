@@ -1,1 +1,6 @@
 src
+.eslintrc.js
+.prettierrc
+esbuild.js
+tsconfig.build.json
+tsconfig.json
