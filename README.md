@@ -30,6 +30,10 @@ This tool require no settings.
 
 `imgSrc` holds a web address (a URL) that indicates the location of an image on the web.
 
+### Use Image Tag `string` _optional_
+
+`useImgTag` indicates whether to use an `<img>` tag for the image rather than `fetch`. To enable this, set the value to `true`. Default is disabled if not set to `true` or omitted.
+
 ## 📝 License
 
 Licensed under the [Apache License](./LICENSE).
